@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <meta http-equiv="refresh" content="5" /> 
+    <head>
+        <style>
+            .btn-up{
+                margin: 0;
+                margin-left: 30%;
+                position: relative;
+                width: 40%;
+                font-size: 20px;
+            }
+        </style>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MIGRAINE | SEAT</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='table.css') }}">
+    </head>
+    <body>
+        <div class="box">
+            <div class="form">
+                <div class="Headed">
+                    <h1> Table | Piya Bus<h1>
+                </div>
+                <div class="CoHeaded">
+                    <h2>Welcome to Piya bus checker</h2>
+                </div>
+                <a href="/index">
+                    <button class="btn-up" >Index</button>
+                </a>
+                <br>
+                <div class="container tbl-container">
+                    <div class = "row tbl-fixed">
+                        <table class="table-striped table-condensed">
+                            <tr class="table__headers">
+                                {% for header in table_headings %}
+                                    <th>{{ header }}</th>
+                                {% endfor %}
+                            </tr>
+                            {% for row in table_data %}
+                                <tr class="table__data">
+                                    {% for cell in row %}
+                                        <td>{{cell}}</td>
+                                    {% endfor %}
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

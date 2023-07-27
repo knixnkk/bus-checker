@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MIGRAINE | BUS CHECKER</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='indexAdmin.css') }}">
+        <style>
+            .box{
+                position: relative;
+                width: 380px;
+                height: 540px;
+                background: #1c1c1c;
+                overflow: hidden;
+            }
+            .box::before{
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 380px;
+                height: 540px;
+                background: linear-gradient(0deg,transparent,#FEC8D8,#FEC8D8);
+                transform-origin: bottom right;
+                animation: animate 6s linear infinite;
+            }
+            .box::after{
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 380px;
+                height: 540px;
+                background: linear-gradient(0deg,transparent,#DCFFFB,#DCFFFB);
+                transform-origin: bottom right;
+                animation: animate 6s linear infinite;
+                animation-delay: -3s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="form">
+                <h1>ADMIN | PY.</h1>
+                <span class="line1"></span>
+                <div class="username">
+                    <h3>Username : {{username}}</h3>
+                </div>
+                <span class="line2"></span>
+                <div class="citizen">
+                    <h3> Citizen ID : {{Citizen}}</h3>
+                </div>
+                <span class="line3"></span>
+                <div class="telephone">
+                    <h3> Tel : {{Tele}}</h3>
+                </div>
+                <span class="line4"></span>
+                <div class="seatno">
+                    <h3> Seat : {{seat}}</h3>
+                </div>
+                <span class="line5"></span>
+                <div class="status">
+                    <h3> Status : {{status}}</h3>
+                </div>
+                <span class="line6"></span>
+                <a href="{{url_for('seatfunc')}}">
+                    <button class="SelectSeat">Select Seat</button>
+                </a>
+                <br>
+                <div class="Tabsime">
+                    <a href="/table" class="selectTab">
+                        <button class="SelectSeat">Table</button>
+                    </a>
+                </div>
+                <br>
+                <div class="LINE">
+                    <a href="/lineapi" class="liney">
+                        <button class="SelectSeat">Line</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

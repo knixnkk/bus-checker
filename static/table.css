@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Itim');
+*{
+    font-family: 'Itim', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    background: #23242a;
+}
+.box{
+    position: relative;
+    width: 700px;
+    height: 920px;
+    background: #1c1c1c;
+    overflow: hidden;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 800px;
+    height: 800px;
+    background: linear-gradient(0deg,transparent,#FEBE8C,#FEBE8C);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.box::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 800px;
+    height: 800px;
+    background: linear-gradient(0deg,transparent,#B6E2A1,#B6E2A1);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.form{
+    position: absolute;
+    inset: 2px;
+    background: #28292d;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+}
+.tbl-container{
+    max-width: fit-content;
+    max-height: fit-content;
+}
+.tbl-fixed{
+    overflow-x: scroll;
+    overflow-y: scroll;
+    max-width: fit-content;
+    max-height: 70vh;
+}
+.table__headers{
+    background: #BCCEF8;
+    width: 100px;
+    height: auto;
+    font-size: 18px;
+}
+.table__data{
+    background: ghostwhite;
+    text-align: center;
+    font-size: 16px;
+}
+.table-condensed{
+    width: 680px;
+    height: 80px;
+}
+.Headed{
+    text-align: center;
+    color: #FEC8D8;
+}
+.CoHeaded{
+    text-align: center;
+    color: #9ED2C6;
+}

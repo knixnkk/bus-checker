@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MIGRAINE | REGISTER</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='register.css') }}">
+        <script type="text/javascript" src="{{ url_for('static', filename='scripts.js') }}"></script>
+    </head>
+    <body>
+        <form action="/register" method="POST">
+        <div class="box">
+            <div class="form">
+                <h1>PY. BUS REGISTER</h1>
+                <h2>Welcome to Piya bus checker</h2>
+                <br>
+                <div class="inputBox">
+                    <input type="text" required="required" name="citizen">
+                    <span>ID card number</span>
+                    <i></i>
+                </div>
+                <div class="input2Box">
+                    <input type="text" required="required" name="username">
+                    <span>Username</span>
+                    <i></i>
+                </div>
+                <div class="input3Box">
+                    <input type="text" required="required" name="tele">
+                    <span>Tel.</span>
+                    <i></i>
+                </div>
+                <button class="RegisterButton">Submit</button>
+            </div>
+        </div>
+    </form>
+        <!--<script src="" async defer></script>-->
+    </body>
+</html>

@@ -1,0 +1,10 @@
+require:
+    python 3.10+
+    mongoDB
+
+package:
+    pip install -r requirement.txt
+
+how to use:
+    open mongoDB and setup
+    open command prompt type "py app.py"

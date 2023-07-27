@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MIGRAINE | SEAT</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='status.css') }}">
+    </head>
+    <body>
+        <div class="box">
+            <div class="form">
+                <h1>PY. BUS STATUS</h1>
+                <span class="line1"></span>
+                <br>
+                <div class="username">
+                    <h3>Username : {{username}}</h3>
+                    <br>
+                    <span class="line2"></span>
+                </div>
+                <div class="status">
+                    <br>
+                    <h3>Status : {{status}}</h3>
+                    <span class="line3"></span>
+                </div>
+                <br>
+                <span class="line2"></span>
+                <div class="seat">
+                    <br>
+                    <h3>Seat : {{seat}}</h3>
+                    <span class="line3"></span>
+                </div>
+                <span class="line2"></span>
+                <br>
+                <a href="/status/up">
+                    <button class="btn-up" >ขึ้นรถ</button>
+                </a>
+                <a href="/status/down">
+                    <button class="btn-down"> ลงรถ</button>
+                </a>
+            </div>
+        </div>
+    </body>
+</html>

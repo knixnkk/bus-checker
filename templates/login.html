@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MIGRAINE | LOGIN</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+        <style>
+            .btn-up {
+                border: none;
+                outline: none;
+                margin-top: 50px;
+                margin-left: 25px;
+                position: relative;
+                padding: 2px 5px;
+                width: 88%;
+                height: 20%;
+                background: #ffff;
+                font-weight: 800;
+                font-size: 18px;
+                cursor: pointer;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="/login" method="POST">
+        <div class="box">
+            <div class="form">
+                <h1>PY. BUS LOGIN</h1>
+                <h2>Welcome to Piya bus checker</h2>
+                <br>
+                <div class="inputBox">
+                    <input type="text" required="required" name="citizen">
+                    <span>ID card number</span>
+                    <i></i>
+                </div>
+                <button class="btn-up">Login</button>
+            </div>
+        </div>
+    </form>
+        <!--<script src="" async defer></script>-->
+    </body>
+</html>

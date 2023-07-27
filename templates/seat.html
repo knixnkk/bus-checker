@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MIGRAINE | SEAT</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='seat.css') }}">
+        <style>
+            .btn-up{
+                margin: 0;
+                margin-left: 90px;
+                position: relative;
+                width: 200px;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="/seatsetup" method="POST">
+        <div class="box">
+            <div class="form">
+                <h1>PY. BUS SEAT</h1>
+                <span class="line1"></span>
+                <br>
+                <div class="username">
+                    <h3>Username : {{username}}</h3>
+                    <br>
+                    <span class="line2"></span>
+                </div>
+                <div class="status">
+                    <br>
+                    <h3>Status : {{status}}</h3>
+                    <span class="line3"></span>
+                </div>
+                <br>
+                <span class="line2"></span>
+                <img src="{{ url_for('static', filename = 'seat.png') }}" alt="" width="300" class="imageCenter">
+                <span class="line2"></span>
+                <div class="inputBox">
+                    <input type="text" required="required" name="seatnum">
+                    <span>Seat Number</span>
+                    <i></i>
+                </div>
+                <br>
+                <button class="btn-up" >Enter</button>
+            </div>
+        </div>
+        </form>
+    </body>
+</html>

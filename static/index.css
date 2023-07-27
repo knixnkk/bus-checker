@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Itim');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Itim', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #23242a;
+}
+.box{
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background: #1c1c1c;
+    overflow: hidden;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,#FEC8D8,#FEC8D8);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.box::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,#DCFFFB,#DCFFFB);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+.form{
+    position: absolute;
+    inset: 2px;
+    background: #28292d;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+}
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+h1{
+    padding-top: 10mm;
+    color: #FEC8D8;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+.SelectSeat {
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    margin-left: 20px;
+    position: relative;
+    padding: 2px 5px;
+    width: 90%;
+    height: 70%;
+    background: #ffff;
+    font-weight: 800;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+}
+.username h3{
+    margin-top: 5px;
+    text-align: center;
+    color:#DCFFFB;
+    margin-bottom: 5px;
+    letter-spacing: 0.5mm;
+}
+.citizen h3{
+    margin-top: 5px;
+    text-align: center;
+    color:#DCFFFB;
+    margin-bottom: 5px;
+    letter-spacing: 0.5mm;
+}
+.telephone h3{
+    margin-top: 5px;
+    text-align: center;
+    color:#DCFFFB;
+    margin-bottom: 5px;
+    letter-spacing: 0.5mm;
+}
+.seatno h3{
+    margin-top: 5px;
+    text-align: center;
+    color:#DCFFFB;
+    margin-bottom: 5px;
+    letter-spacing: 0.5mm;
+}
+.status h3{
+    margin-top: 5px;
+    text-align: center;
+    color:#DCFFFB;
+    margin-bottom: 5px;
+    letter-spacing: 0.5mm;
+}
+.line1{
+    padding-top: 20px;
+    margin: 0 auto;
+    border-bottom: 2px solid #ccc;
+    display: block;
+    width: 90%;
+    height: 2px;
+}
+.line2{
+    padding-top: 5px;
+    margin: 0 auto;
+    border-bottom: 2px solid #ccc;
+    display: block;
+    width: 90%;
+    height: 2px;
+}
+.line3{
+    padding-top: 5px;
+    margin: 0 auto;
+    border-bottom: 2px solid #ccc;
+    display: block;
+    width: 90%;
+    height: 2px;
+}
+.line4{
+    padding-top: 5px;
+    margin: 0 auto;
+    border-bottom: 2px solid #ccc;
+    display: block;
+    width: 90%;
+    height: 2px;
+}
+.line5{
+    margin-top: 45px;
+    margin: 0 auto;
+    border-bottom: 2px solid #ccc;
+    display: block;
+    width: 90%;
+    height: 2px;
+}
+.line6{
+    padding-top: 5px;
+    margin: 0 auto;
+    border-bottom: 2px solid #ccc;
+    display: block;
+    width: 90%;
+    height: 2px;
+}
